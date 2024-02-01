@@ -1,0 +1,482 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36eeaa",
+        "name": "MF 38B20R",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+        "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb9",
+        "name": "MF 38B20R",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "drinks",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7c",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "popular",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee88",
+         "name": "MF 38B20R",
+        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7a",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "popular",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee74",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "popular",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee712",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "popular",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7x",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "popular",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8c",
+         "name": "MF 38B20R",
+        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee94",
+         "name": "MF 38B20R",
+        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9e",
+         "name": "MF 38B20R",
+        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+        "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea6",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeaf",
+         "name": "MF 38B20R",
+        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee89",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8a",
+         "name": "MF 38B20R",
+        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee96",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee81",
+        "name": "MF 38B20R",
+        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "offered",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee84",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea4",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea5",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee87",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee83",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "offered",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7f",
+        "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "popular",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea8",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeba",
+        "name": "MF 38B20R",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "drinks",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee80",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "offered",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee90",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb0",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8d",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8e",
+         "name": "MF 38B20R",
+        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea7",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee99",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb3",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb5",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb6",
+        "name": "MF 38B20R",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb8",
+        "name": "MF 38B20R",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7e",
+        "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "popular",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8b",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8f",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee91",
+        "name": "MF 38B20R",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee97",
+        "name": "MF 38B20R",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea0",
+        "name": "MF 38B20R",
+        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea9",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee85",
+        "name": "MF 38B20R",
+        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee93",
+        "name": "MF 38B20R",
+        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee95",
+         "name": "MF 38B20R",
+        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9b",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb7",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9c",
+         "name": "MF 38B20R",
+        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+        "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9d",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeac",
+        "name": "MF 38B20R",
+        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb4",
+        "name": "MF 38B20R",
+        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee98",
+         "name": "MF 38B20R",
+        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+        "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee82",
+         "name": "MF 38B20R",
+        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "offered",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee86",
+         "name": "MF 38B20R",
+        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "dessert",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9a",
+         "name": "MF 38B20R",
+        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "pizza",
+        "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeab",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "salad",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb1",
+        "name": "MF 38B20R",
+        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eead",
+         "name": "MF 38B20R",
+        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeae",
+        "name": "MF 38B20R",
+        "description": "LUCAS BATTERY 12V 35Ah PREMIUM MF 38B20L / MF 38B20R ",
+        "image": "/Images/battery1-removebg-preview.png",
+        "category": "soup",
+         "price": "27,300.00"
+    }
+]
