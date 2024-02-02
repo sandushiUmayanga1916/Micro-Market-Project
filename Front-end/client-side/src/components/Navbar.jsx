@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { LuPhoneCall } from "react-icons/lu";
+import { FaUser } from "react-icons/fa";
+import Model from "./Model";
 
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
@@ -25,14 +26,14 @@ const Navbar = () => {
   const NavItems = (
     <>
       <li>
-        <a href="/">Home</a>
+        <a href="/" className=" text-0-yellowColor">Home</a>
       </li>
       <li>
         <details>
           <summary>Menu</summary>
           <ul className="p-2">
             <li>
-              <a>All</a>
+              <a href="/menu">All</a>
             </li>
             <li>
               <a>Bike</a>
@@ -146,10 +147,11 @@ const Navbar = () => {
               <span className="badge badge-sm indicator-item">8</span>
             </div>
           </div>
-          <a className="btn bg-0-yellowColor text-white flex items-center px-6 rounded-full gap-2">
-            <LuPhoneCall />
-            Connect
-          </a>
+          <button   onClick={()=>document.getElementById('my_modal_5').showModal()} className="btn bg-0-yellowColor text-white flex items-center px-6 rounded-full gap-2">
+            <FaUser />
+            Login
+          </button>
+          <Model/>
         </div>
       </div>
     </header>
