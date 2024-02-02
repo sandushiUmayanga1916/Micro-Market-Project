@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 const Testimonials = () => {
   return (
-    <div className="selection-container mt-36">
+    <div className="selection-container py-36 bg-gradient-to-r from-[#fffdf7] via-[#fff2b2] to-[#ffee99] ...">
       <div className="flex flex-col md:flex-row items-center justify-between gap-12">
         <div className="md:w-1/2">
           <img src="/Images/Home/testimonial/testimonial.png" alt="" className=" rounded-xl" />

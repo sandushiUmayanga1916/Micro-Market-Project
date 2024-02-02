@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-    <footer className="footer xl:px-24 py-10 px-4 text-base-content">
+    <footer className="footer xl:px-24 py-10 px-4 text-base-content bg-gradient-to-r from-[#fffdf7] via-[#fff2b2] to-[#ffee99] ...">
       <aside>
         <img src="" alt="" />
         <p className="my-3 md:w-40">

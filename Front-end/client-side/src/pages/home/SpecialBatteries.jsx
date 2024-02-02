@@ -84,7 +84,7 @@ const SpecialBatteries = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="selection-container my-20 relative">
+    <div className="selection-container relative bg-gradient-to-r  from-[#fffdf7] via-[#fff2b2] to-[#ffee99] ...">
       <div className="text-left">
         <p className="subtitle">Special Batteries</p>
         <p className="title md:w-[520px]">Standout Batteries from Our Shop</p>
@@ -105,7 +105,11 @@ const SpecialBatteries = () => {
         </button>
       </div>
 
-      <Slider ref={slider} {...settings} className="overflow-hidden mt-10 space-x-5">
+      <Slider
+        ref={slider}
+        {...settings}
+        className="overflow-hidden mt-10 space-x-5"
+      >
         {batteries.map((item, i) => (
           <Cards key={i} item={item} />
         ))}

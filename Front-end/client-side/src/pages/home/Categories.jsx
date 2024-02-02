@@ -28,14 +28,14 @@ const Categories = () => {
     },
   ];
   return (
-    <div className="selection-container py-16">
+    <div className="selection-container py-16 bg-gradient-to-r from-[#fffdf7] via-[#fff2b2] to-[#ffee99] ...">
       <div className="text-center">
         <p className="subtitle">Top seller</p>
         <p className="title">Popular Categories</p>
       </div>
 
       {/* Category cards */}
-      <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-around items-center mt-12">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-between items-center mt-12">
         {categoryItems.map((item, i) => (
           <div
             key={i}

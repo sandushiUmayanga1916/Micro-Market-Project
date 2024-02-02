@@ -11,7 +11,7 @@ const Cards = ({ item }) => {
   };
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-80 bg-base-100 shadow-xl">
       <div
         className={`rating gap-1 absolute right-2 top-2 p-4 thumbsUp ok bg-0-yellowColor ${
           isThumbsUp ? " text-blue-700" : "text-white"
