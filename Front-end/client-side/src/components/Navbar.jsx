@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import Model from "./Model";
+import { AuthContext } from "../context/AuthProvider";
+import Profile from "./Profile";
 
 const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
+  const { user } = useContext(AuthContext);
+  console.log(user);
 
   //handle scroll function
-  useEffect( () => {
+  useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if( offset > 0){
-        setSticky(true)
-      }
-      else{
-        setSticky(false)
+      if (offset > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
       }
     };
 
@@ -21,12 +24,14 @@ const Navbar = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    }
-  }, [])
+    };
+  }, []);
   const NavItems = (
     <>
       <li>
-        <a href="/" className=" text-0-yellowColor">Home</a>
+        <a href="/" className=" text-0-yellowColor">
+          Home
+        </a>
       </li>
       <li>
         <details>
@@ -67,7 +72,13 @@ const Navbar = () => {
   );
   return (
     <header className=" max-w-screen-2xl container mx-auto fixed left-0 right-0 transition-all duration-300 ease-in-out">
-      <div className={`navbar xl:px-24 ${isSticky ? "shadow-md bg-base-100 transition-all duration-300 ease-in-out" : ""}`}>
+      <div
+        className={`navbar xl:px-24 ${
+          isSticky
+            ? "shadow-md bg-base-100 transition-all duration-300 ease-in-out"
+            : ""
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -147,11 +158,16 @@ const Navbar = () => {
               <span className="badge badge-sm indicator-item">8</span>
             </div>
           </div>
-          <button   onClick={()=>document.getElementById('my_modal_5').showModal()} className="btn bg-0-yellowColor text-white flex items-center px-6 rounded-full gap-2">
-            <FaUser />
-            Login
-          </button>
-          <Model/>
+         {
+          user ? <Profile user={user}/> :  <button
+          onClick={() => document.getElementById("my_modal_5").showModal()}
+          className="btn bg-0-yellowColor text-white flex items-center px-6 rounded-full gap-2"
+        >
+          <FaUser />
+          Login
+        </button>
+         }
+          <Model />
         </div>
       </div>
     </header>
