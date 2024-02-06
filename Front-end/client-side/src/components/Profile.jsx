@@ -1,8 +1,21 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthProvider";
 
-const Profile = ({ user }) => {
+const Profile = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        console.error("Logout error:", error); // Log any errors to console
+      });
+  };
+
   return (
     <div>
       <div className="drawer drawer-end z-50">
@@ -14,12 +27,14 @@ const Profile = ({ user }) => {
             className="drawer-button btn btn-ghost btn-circle avatar"
           >
             <div className="w-10 rounded-full">
-            {
-                user.photoURL ? <img
-                alt="Tailwind CSS Navbar component"
-                src={user.photoURL}
-              /> : <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              }
+              {user && user.photoURL ? (
+                <img alt="User" src={user.photoURL} />
+              ) : (
+                <img
+                  alt="Default user"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              )}
             </div>
           </label>
         </div>
@@ -32,7 +47,7 @@ const Profile = ({ user }) => {
           <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
             {/* Sidebar content here */}
             <li>
-              <a>Profile</a>
+              <a href="/update-profile">Profile</a>
             </li>
             <li>
               <a>Orders</a>
@@ -41,7 +56,7 @@ const Profile = ({ user }) => {
               <a>Setting</a>
             </li>
             <li>
-              <a>Logout</a>
+              <a onClick={handleLogout}>Logout</a>
             </li>
           </ul>
         </div>

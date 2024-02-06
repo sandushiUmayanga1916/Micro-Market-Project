@@ -20,13 +20,15 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  //   creat an account
+  //   create an account
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // signup with gmail
   const signUpWithGmail = () => {
+    setLoading(true);
     return signInWithPopup(auth, GoogleProvider);
   };
 
@@ -36,8 +38,8 @@ const AuthProvider = ({ children }) => {
   };
 
   //   logout
-  const logout = () => {
-    signOut(auth);
+  const logOut = () => {
+    return signOut(auth);
   };
 
   // update profile
@@ -48,20 +50,20 @@ const AuthProvider = ({ children }) => {
     });
   };
 
-  // check signin user
+  // check signed-in user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
         setLoading(false);
       } else {
-        // User is signed out
-        // ...
+        setUser(null); // Set user to null when signed out
+        setLoading(false);
       }
     });
     return () => {
-        return unsubscribe();
-    }
+      return unsubscribe();
+    };
   }, []);
 
   const authInfo = {
@@ -69,7 +71,7 @@ const AuthProvider = ({ children }) => {
     createUser,
     signUpWithGmail,
     login,
-    logout,
+    logOut,
     updateUserProfile,
     loading,
   };
