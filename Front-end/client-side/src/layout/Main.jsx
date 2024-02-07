@@ -12,7 +12,9 @@ const Main = () => {
     <div className="bg-prigmayBG">
       <div>
       <Navbar />
+      <div className=" min-h-screen">
       <Outlet />
+      </div>
       <Footer />
     </div>
   </div>

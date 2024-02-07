@@ -40,12 +40,11 @@ const SpecialBatteries = () => {
     fetch("/menu.json")
       .then((res) => res.json())
       .then((data) => {
-        const specials = data.filter((item) => item.category === "popular");
-        // console.log(specials)
-        setBatteries(specials);
+        const popularBatteries = data.filter((item) => item.category.includes("popular"));
+        setBatteries(popularBatteries);
       });
   }, []);
-
+  
   const settings = {
     dots: true,
     infinite: false,

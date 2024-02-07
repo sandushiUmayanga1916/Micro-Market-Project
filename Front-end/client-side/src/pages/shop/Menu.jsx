@@ -14,7 +14,7 @@ const Menu = () => {
     // Fetch data from the backend
     const fetchData = async () => {
       try {
-        const response = await fetch("/menu.json");
+        const response = await fetch("http://localhost:5000/menu");
         const data = await response.json();
         // console.log(data);
         setMenu(data);
@@ -32,12 +32,13 @@ const Menu = () => {
     const filtered =
       category === "all"
         ? menu
-        : menu.filter((item) => item.category === category);
-
+        : menu.filter((item) => item.category.includes(category));
+  
     setFilteredItems(filtered);
     setSelectedCategory(category);
     setCurrentPage(1);
   };
+  
 
   // Show all data
   const showAll = () => {

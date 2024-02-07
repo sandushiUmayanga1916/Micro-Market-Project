@@ -1,482 +1,138 @@
 [
     {
         "_id": "642c155b2c4774f05c36eeaa",
-        "name": "MF 38B20R",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "name": "MF38B20R/L",
+        "description": "LUCAS BATTERY 12V 35Ah PREMIUM MF 38B20L / MF 38B20R maintenance-free battery is suitable for Mitsubishi, Mazda, Toyota, Nissan, Honda, Suzuki, etc.",
         "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-        "price": "27,300.00"
+        "category": ["car", "van"],
+        "price": 27300
     },
     {
         "_id": "642c155b2c4774f05c36eeb9",
-        "name": "MF 38B20R",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
+        "name": "MF55B24R/L",
+        "description": "LUCAS BATTERY 12V 45Ah PREMIUM MF 5524L / MF 5524R ",
         "image": "/Images/battery1-removebg-preview.png",
-       "category": "bike",
-         "price": "27,300.00"
+       "category": ["car", "lorry"],
+         "price": 25200
     },
     {
         "_id": "642c155b2c4774f05c36ee7c",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+         "name": "MFS65R/L",
+        "description": "LUCAS BATTERY 12V 65Ah STAR MFS65L / MFS65R ",
         "image": "/Images/battery1-removebg-preview.png",
-        "category": "popular",
-         "price": "27,300.00"
+        "category": "lorry",
+         "price": 34915
     },
     {
         "_id": "642c155b2c4774f05c36ee88",
-         "name": "MF 38B20R",
-        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
+         "name": "MF 100",
+        "description": "LUCAS BATTERY 12V 100Ah STAR MF Trackter, Harvester",
+        "image": "/Images/STAR-MF-100.png",
+        "category": "other",
+         "price": 59100
     },
     {
         "_id": "642c155b2c4774f05c36ee7a",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "popular",
-         "price": "27,300.00"
+         "name": "MF 120",
+        "description": "LUCAS BATTERY 12V 100Ah STAR MF",
+        "image": "/Images/STAR-MF-100.png",
+        "category": ["popular", "van"],
+         "price": 69000
     },
     {
         "_id": "642c155b2c4774f05c36ee74",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "popular",
-         "price": "27,300.00"
+         "name": "MF 150",
+        "description": "LUCAS BATTERY 12V 100Ah STAR MF",
+        "image": "/Images/26.-mf-150.png",
+        "category": "lorry",
+         "price": 84850
     },
     {
         "_id": "642c155b2c4774f05c36ee712",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+         "name": "MF 200",
+        "description": "LUCAS BATTERY 12V 100Ah STAR MF Lorry/ Bus",
         "image": "/Images/battery1-removebg-preview.png",
-        "category": "popular",
-         "price": "27,300.00"
+        "category": ["lorry", "other"],
+         "price": 105200
     },
     {
         "_id": "642c155b2c4774f05c36ee7x",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+         "name": "MT 2.5 L-BS (MF)",
+        "description": "CALIBER, HONDA NAVI, PASSION, CD DAWN, CD 100, CD 90 CT 100, BOXER, PLATINA, HERO HONDA, YAMAHA LBRO",
         "image": "/Images/battery1-removebg-preview.png",
         "category": "popular",
-         "price": "27,300.00"
+         "price": 5990
     },
     {
         "_id": "642c155b2c4774f05c36ee8c",
-         "name": "MF 38B20R",
-        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+         "name": "MT4L-BS (MF)",
+        "description": "12V 4AH PLATINA 100ES, S-STAR, SAFFARI, HERO HONDA NXG, DIO, CD 90 (CHINA), SUPER CUB, PRESS CUB, MD 90, CD 50. LX 48 CC ",
         "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
+        "category": ["bike", "popular"],
+         "price": 8290
     },
     {
         "_id": "642c155b2c4774f05c36ee94",
-         "name": "MF 38B20R",
-        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+         "name": "MTZ 5 S (MF)",
+        "description": "12V 5AH HERO HONDA NXG, S-STAR, SAFFARI, PLATINA NEW, HONDA NAVI CD 90 (CHINA), SUPER CUB, PRESS CUB, MD 90, CD 50, LX 48 CC DIO ONLIGHT",
         "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
+       "category": ["bike", "popular"],
+         "price": 8490
     },
     {
         "_id": "642c155b2c4774f05c36ee9e",
-         "name": "MF 38B20R",
-        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
+         "name": "MT5L-BS (MF)",
+        "description": "12V 5AH BAJAJ KRISTAL TVS, VIGO, FZ 150, PULSER 135, PLEASURE, DISCOVER 125, XCD 125, SCOOTER, FLAME, WAVE 100,RZ 125, RG 125, AR 125, GT 250, HERO HONDA, TVS SCOOTY PEP, FZ VI.",
         "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-        "price": "27,300.00"
+       "category": ["bike", "popular"],
+        "price": 9200
     },
     {
         "_id": "642c155b2c4774f05c36eea6",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+         "name": "MTX 5L-BS (MF) (MTX 5L-BS)",
+        "description": "12V 5AH HUNK, TVS VIGO, HONDA DIO, HERO DASH, FZ V2 BAJA, PLEASURE NEW, KINATIC, NEW CBZ, KARIZMA, GLAMER",
         "image": "/Images/battery1-removebg-preview.png",
-        "category": "other",
-         "price": "27,300.00"
+        "category": ["bike", "popular"],
+         "price": 9490
     },
     {
         "_id": "642c155b2c4774f05c36eeaf",
-         "name": "MF 38B20R",
-        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+         "name": "MT 6L-BS",
+        "description": "12V 6AH HUNK, TVS VIGO, HONDA DIO, HERO DASH, FZ V2 BAJA, PLEASURE NEW, KINATIC, NEW CBZ, KARIZMA, GLAMER",
         "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
+        "category": ["bike", "popular"],
+         "price": 9700
     },
     {
         "_id": "642c155b2c4774f05c36ee89",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+         "name": "MT7B-BS (MF)",
+        "description": "12V 7AH KARIZMA, HUNK, PULSER 150 CBZ, FLAME, STAR, DISCOVERY 150, VICTOR, GLX",
         "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
+        "category": ["bike", "popular"],
+         "price": 10990
     },
     {
         "_id": "642c155b2c4774f05c36ee8a",
-         "name": "MF 38B20R",
-        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
+         "name": "MTX 7L-BS (MF)",
+        "description": "12V 7AH DEMAK, MAHENDRA, HONET, JERDE, CBR, AXI.",
         "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
+        "category": ["bike", "popular"],
+         "price": 10990
     },
     {
         "_id": "642c155b2c4774f05c36ee96",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
+        "name": "MT 9-BS (MF)",
+        "description": "12V 9AH BENLY, GN 125, GS 125, HARLY, GALSER, PULSER, APACHE, DISCOVERY OLD, GN 250, CB 250 TD, CM 250, CM 200, CB 175.",
         "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
+       "category": ["bike", "popular"],
+         "price": 12990
     },
     {
         "_id": "642c155b2c4774f05c36ee81",
-        "name": "MF 38B20R",
-        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "offered",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee84",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eea4",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "other",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eea5",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "other",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee87",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee83",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "offered",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee7f",
-        "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "popular",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eea8",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "other",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeba",
-        "name": "MF 38B20R",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee80",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "offered",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee90",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb0",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
+        "name": "MTX-9-BS (MF)",
+        "description": "12V 9AH PULSER 220, CD 250, CBX 250.",
         "image": "/Images/battery1-removebg-preview.png",
         "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee8d",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee8e",
-         "name": "MF 38B20R",
-        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eea7",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "other",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee99",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb3",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb5",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb6",
-        "name": "MF 38B20R",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb8",
-        "name": "MF 38B20R",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee7e",
-        "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "popular",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee8b",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee8f",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee91",
-        "name": "MF 38B20R",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee97",
-        "name": "MF 38B20R",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eea0",
-        "name": "MF 38B20R",
-        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eea9",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "other",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee85",
-        "name": "MF 38B20R",
-        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee93",
-        "name": "MF 38B20R",
-        "description": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee95",
-         "name": "MF 38B20R",
-        "description": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee9b",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb7",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee9c",
-         "name": "MF 38B20R",
-        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-        "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee9d",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeac",
-        "name": "MF 38B20R",
-        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "other",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb4",
-        "name": "MF 38B20R",
-        "description": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee98",
-         "name": "MF 38B20R",
-        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-        "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee82",
-         "name": "MF 38B20R",
-        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "offered",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee86",
-         "name": "MF 38B20R",
-        "description": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "car",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee9a",
-         "name": "MF 38B20R",
-        "description": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "/Images/battery1-removebg-preview.png",
-       "category": "van",
-        "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeab",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "other",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb1",
-        "name": "MF 38B20R",
-        "description": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eead",
-         "name": "MF 38B20R",
-        "description": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeae",
-        "name": "MF 38B20R",
-        "description": "LUCAS BATTERY 12V 35Ah PREMIUM MF 38B20L / MF 38B20R ",
-        "image": "/Images/battery1-removebg-preview.png",
-        "category": "bike",
-         "price": "27,300.00"
+         "price": 13990
     }
 ]
