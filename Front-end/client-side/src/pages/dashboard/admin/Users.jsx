@@ -2,15 +2,31 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const Users = () => {
+  const axiosSecure = useAxiosSecure();
   const { refetch, data: users = [] } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/users`);
-      return res.json();
+      const res = await axiosSecure.get("/users");
+      return res.data;
     },
   });
+
+  const handleMakeAdmin = (user) => {
+    axiosSecure.patch(`/users/admin/${user._id}`).then((res) => {
+      alert(`${user.name} is now admin`);
+      refetch();
+    });
+  };
+
+  const handleDeleteUser = user => {
+    axiosSecure.delete(`/users/${user._id}`).then(res => {
+      alert(`${user.name} is removed from database`);
+      refetch();
+    })
+  }
 
   console.log(users);
 
@@ -42,11 +58,11 @@ const Users = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>
-                  {user.role === "admin" ? (
+                    {user.role === "admin" ? (
                       "Admin"
                     ) : (
                       <button
-                        
+                        onClick={() => handleMakeAdmin(user)}
                         className="btn btn-xs btn-circle bg-indigo-500 text-white"
                       >
                         <FaUser />
@@ -54,7 +70,7 @@ const Users = () => {
                     )}
                   </td>
                   <td>
-                    <button className="btn btn-sm bg-teal-500 text-white">
+                    <button onClick={() => handleDeleteUser(user)} className="btn btn-sm bg-teal-500 text-white">
                       <FaTrashAlt />
                     </button>
                   </td>

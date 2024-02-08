@@ -3,17 +3,21 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../context/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaFacebook, FaInstagramSquare } from "react-icons/fa";
-import axios from "axios";
+import useAuth from "./../hooks/useAuth";
+import useAxiosPublic from "./../hooks/useAxiosPublic";
 
 const Login = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const { signUpWithGmail, login } = useContext(AuthContext);
+  const { signUpWithGmail, login } = useAuth();
   const [errorMessage, setErrorMessage] = useState("");
+
+  const useAxiosPublic2 = useAxiosPublic();
 
   // directing home page or specific page
   const location = useLocation();
@@ -23,27 +27,31 @@ const Login = () => {
   const onSubmit = (data) => {
     const email = data.email;
     const password = data.password;
-    // console.log(email, password)
     login(email, password)
       .then((result) => {
+        // Signed in
         const user = result.user;
-        const userInfo = {
+        const userInfor = {
           name: data.name,
           email: data.email,
         };
-        axios.post("http://localhost:5000/users", userInfo).then((response) => {
+        useAxiosPublic2.post("/users", userInfor).then((response) => {
           // console.log(response);
-          alert("Login successfully complete");
-          document.getElementById("my_modal_5").close();
+          alert("Signin successful!");
           navigate(from, { replace: true });
         });
+        // console.log(user);
+        // ...
       })
       .catch((error) => {
         const errorMessage = error.message;
-        setErrorMessage("Provide a correct email and password");
+        setErrorMessage("Please provide valid email & password!");
       });
+    reset();
   };
 
+  // login with google
+  // login with google
   const handleLogin = () => {
     signUpWithGmail()
       .then((result) => {
@@ -52,21 +60,22 @@ const Login = () => {
           name: result?.user?.displayName,
           email: result?.user?.email,
         };
-        axios
-          .post("http://localhost:5000/users", userInfor)
-          .then((response) => {
-            // console.log(response);
-            alert("Signin successful!");
-            document.getElementById("my_modal_5").close();
-            navigate(from, { replace: true });
-          });
+        useAxiosPublic2.post("/users", userInfor).then((response) => {
+          // console.log(response);
+          alert("Signin successful!");
+          navigate("/");
+        });
       })
       .catch((error) => console.log(error));
   };
   return (
     <div className="max-w-md bg-white shadow w-full mx-auto flex items-center justify-center my-20">
       <div className="mb-5">
-        <form>
+        <form
+          className="card-body"
+          method="dialog"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <h3 className="font-bold text-lg">Please Login!</h3>
 
           {/* email */}
@@ -125,13 +134,12 @@ const Login = () => {
               Signup now
             </Link>
           </p>
-          <button
-            htmlFor="my_modal_5"
-            onClick={() => document.getElementById("my_modal_5").close()}
-            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-          >
-            ✕
-          </button>
+          <Link to="/">
+            <div
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
+              ✕
+            </div></Link>
         </form>
 
         {/* Social Signin */}

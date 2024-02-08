@@ -4,7 +4,7 @@ import { FaGoogle, FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import Model from "./Model";
 import { AuthContext } from "../context/AuthProvider";
-import axios from "axios";
+import useAxiosPublic from "../hooks/useAxiosPublic"; // Importing useAxiosPublic
 
 const Signup = () => {
   const {
@@ -15,6 +15,8 @@ const Signup = () => {
 
   const { signUpWithGmail, createUser, updateUserProfile } =
     useContext(AuthContext);
+
+  const useAxiosPublic2 = useAxiosPublic(); // Rename to useAxiosPublic
 
   // directing home page or specific page
   const location = useLocation();
@@ -34,8 +36,8 @@ const Signup = () => {
             name: data.name,
             email: data.email,
           };
-          axios
-            .post("http://localhost:5000/users", userInfo)
+          useAxiosPublic2
+            .post("/users", userInfo) // Use useAxiosPublic2 here
             .then((response) => {
               // console.log(response);
               alert("Account create Successfully");
@@ -60,12 +62,11 @@ const Signup = () => {
           name: result?.user?.displayName,
           email: result?.user?.email,
         };
-        axios
-          .post("http://localhost:5000/users", userInfor)
+        useAxiosPublic2
+          .post("/users", userInfor) // Use useAxiosPublic2 here
           .then((response) => {
             // console.log(response);
             alert("Signin successful!");
-            document.getElementById("my_modal_5").close();
             navigate(from, { replace: true });
           });
       })
@@ -80,7 +81,7 @@ const Signup = () => {
           className="card-body"
           method="dialog"
         >
-          <h3 className="font-bold text-lg">Creacte an account</h3>
+          <h3 className="font-bold text-lg">Create an account</h3>
 
           {/* name */}
           <div className="form-control">
