@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -51,6 +52,9 @@ const Profile = () => {
             </li>
             <li>
               <a>Orders</a>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
             </li>
             <li>
               <a>Setting</a>

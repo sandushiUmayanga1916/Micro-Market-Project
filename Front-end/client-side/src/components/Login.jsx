@@ -1,58 +1,50 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
+import { AuthContext } from "../context/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaFacebook, FaInstagramSquare } from "react-icons/fa";
-import { useForm } from "react-hook-form";
-import Model from "./Model";
-import { AuthContext } from "../context/AuthProvider";
 import axios from "axios";
 
-const Signup = () => {
+const Login = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const { signUpWithGmail, createUser, updateUserProfile } =
-    useContext(AuthContext);
+  const { signUpWithGmail, login } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // directing home page or specific page
   const location = useLocation();
   const navigate = useNavigate();
-
   const from = location.state?.from?.pathname || "/";
 
   const onSubmit = (data) => {
     const email = data.email;
     const password = data.password;
-    createUser(email, password)
+    // console.log(email, password)
+    login(email, password)
       .then((result) => {
-        // Signed up
         const user = result.user;
-        updateUserProfile(data.email, data.photoURL).then(() => {
-          const userInfo = {
-            name: data.name,
-            email: data.email,
-          };
-          axios
-            .post("http://localhost:5000/users", userInfo)
-            .then((response) => {
-              // console.log(response);
-              alert("Account create Successfully");
-              document.getElementById("my_modal_5").close();
-              navigate(from, { replace: true });
-            });
+        const userInfo = {
+          name: data.name,
+          email: data.email,
+        };
+        axios.post("http://localhost:5000/users", userInfo).then((response) => {
+          // console.log(response);
+          alert("Login successfully complete");
+          document.getElementById("my_modal_5").close();
+          navigate(from, { replace: true });
         });
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
+        setErrorMessage("Provide a correct email and password");
       });
   };
 
-  // login with google
-  const handleRegister = () => {
+  const handleLogin = () => {
     signUpWithGmail()
       .then((result) => {
         const user = result.user;
@@ -71,29 +63,11 @@ const Signup = () => {
       })
       .catch((error) => console.log(error));
   };
-
   return (
-    <div className=" max-w-md bg-white w-full shadow mx-auto flex justify-center items-center my-20">
-      <div className="modal-action mt-0 flex flex-col justify-center">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="card-body"
-          method="dialog"
-        >
-          <h3 className="font-bold text-lg">Creacte an account</h3>
-
-          {/* name */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Name</span>
-            </label>
-            <input
-              type="name"
-              placeholder="Your name"
-              className="input input-bordered"
-              {...register("name")}
-            />
-          </div>
+    <div className="max-w-md bg-white shadow w-full mx-auto flex items-center justify-center my-20">
+      <div className="mb-5">
+        <form>
+          <h3 className="font-bold text-lg">Please Login!</h3>
 
           {/* email */}
           <div className="form-control">
@@ -127,36 +101,45 @@ const Signup = () => {
           </div>
 
           {/* error */}
+          {errorMessage ? (
+            <p className=" text-red-600 text-sm italic">{errorMessage}</p>
+          ) : (
+            ""
+          )}
 
           {/* Login button */}
-          <div className="form-control mt-6">
+          <div className="form-control mt-4">
             <input
               type="submit"
-              value="Signup"
+              value="Login"
               className="btn bg-0-yellowColor text-white"
             />
           </div>
-          <p className=" text-center my-2">
-            Already have an account{" "}
-            <button
-              className=" underline text-red-600 ml-1 hover:font-semibold"
-              onClick={() => document.getElementById("my_modal_5").showModal()}
-            >
-              Login
-            </button>{" "}
-          </p>
 
-          <Link
-            to="/"
+          <p className=" text-center my-2">
+            Do not have an account?
+            <Link
+              to="/signup"
+              className=" underline text-red-600 ml-1 hover:font-semibold"
+            >
+              Signup now
+            </Link>
+          </p>
+          <button
+            htmlFor="my_modal_5"
+            onClick={() => document.getElementById("my_modal_5").close()}
             className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
           >
             ✕
-          </Link>
+          </button>
         </form>
 
         {/* Social Signin */}
         <div className=" text-center space-x-3 mb-5">
-          <button className="btn btn-circle hover:bg-0-yellowColor hover:text-white" onClick={handleRegister}>
+          <button
+            className="btn btn-circle hover:bg-0-yellowColor hover:text-white"
+            onClick={handleLogin}
+          >
             <FaGoogle />
           </button>
           <button className="btn btn-circle hover:bg-0-yellowColor hover:text-white">
@@ -167,9 +150,8 @@ const Signup = () => {
           </button>
         </div>
       </div>
-      <Model />
     </div>
   );
 };
 
-export default Signup;
+export default Login;

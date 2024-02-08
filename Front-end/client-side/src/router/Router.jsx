@@ -5,6 +5,12 @@ import Menu from "../pages/shop/Menu";
 import Signup from "../components/Signup";
 import UpdateProfile from "../pages/dashboard/UpdateProfile";
 import CartPage from "../pages/shop/CartPage";
+import PrivateRouter from './../privateRouter/PrivateRouter';
+import DashboardLayout from "../layout/DashboardLayout";
+import Dashboard from "../pages/dashboard/admin/Dashboard";
+import Users from "../pages/dashboard/admin/Users";
+import Login from "../components/Login";
+
 
 
 const router = createBrowserRouter([
@@ -37,8 +43,26 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: "login",
+    element: <Login />,
+  },
+  {
     path: "signup",
     element: <Signup />,
+  },
+  {
+    path: "dashboard",
+    element: <PrivateRouter><DashboardLayout/></PrivateRouter>,
+    children: [
+      {
+        path: '',
+        element: <Dashboard/>
+      },
+      {
+        path: 'users', 
+        element: <Users/>
+      },
+    ]
   },
 ]);
 

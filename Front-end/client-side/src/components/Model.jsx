@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "./../context/AuthProvider";
+import axios from "axios";
 
 const Model = () => {
   const {
@@ -27,14 +28,22 @@ const Model = () => {
     login(email, password)
       .then((result) => {
         const user = result.user;
-        alert("Login successfully complete");
-        document.getElementById("my_modal_5").close();
-        navigate(from, { replace: true });
+        const userInfo = {
+          name: data.name,
+          email: data.email,
+        };
+        axios.post("http://localhost:5000/users", userInfo).then((response) => {
+          // console.log(response);
+          alert("Login successfully complete");
+          document.getElementById("my_modal_5").close();
+          navigate(from, { replace: true });
+        });
       })
       .catch((error) => {
         const errorMessage = error.message;
         setErrorMessage("Provide a correct email and password");
       });
+      
   };
 
   // google signin
@@ -42,11 +51,22 @@ const Model = () => {
     signUpWithGmail()
       .then((result) => {
         const user = result.user;
-        alert("Login Successfull");
-        navigate(from, { replace: true });
+        const userInfor = {
+          name: result?.user?.displayName,
+          email: result?.user?.email,
+        };
+        axios
+          .post("http://localhost:5000/users", userInfor)
+          .then((response) => {
+            // console.log(response);
+            alert("Signin successful!");
+            document.getElementById("my_modal_5").close();
+            navigate(from, { replace: true });
+          });
       })
       .catch((error) => console.log(error));
   };
+  
   return (
     <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
       <div className="modal-box">
