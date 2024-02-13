@@ -1,14 +1,20 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-import { RiBatterySaverFill } from "react-icons/ri";
-import useAxiosPublic from "./../../../hooks/useAxiosPublic";
-import useAxiosSecure from "./../../../hooks/useAxiosSecure";
+import { PiBatteryWarningVerticalFill } from "react-icons/pi";
 import Swal from "sweetalert2";
+import { useForm } from "react-hook-form";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
-const AddMenu = () => {
+const UpdateMenu = () => {
+  const item = useLoaderData();
+  console.log(item);
+
   const { register, handleSubmit, reset } = useForm();
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
+
+  const navigate = useNavigate();
 
   // image hosting key
   const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
@@ -23,27 +29,28 @@ const AddMenu = () => {
         "content-type": "multipart/form-data",
       },
     });
-    // console.log(hostingImg)
+    // console.log(hostingImg.data)
     if (hostingImg.data.success) {
       const menuItem = {
         name: data.name,
         category: data.category,
-        price: parseFloat(data.price),
+        price: parseFloat(data.price), 
         description: data.description,
-        image: hostingImg.data.data.display_url,
+        image: hostingImg.data.data.display_url
       };
 
-      // console.log(menuItem)
-      const postMenuItem = axiosSecure.post("/menu", menuItem);
-      if (postMenuItem) {
-        reset();
+      // console.log(menuItem);
+      const postMenuItem = axiosSecure.patch(`/menu/${item._id}`, menuItem);
+      if(postMenuItem){
+        reset()
         Swal.fire({
           position: "middle",
           icon: "success",
-          title: "Your Item is inserted successfully!",
+          title: "Your item updated successfully!",
           showConfirmButton: false,
-          timer: 1500,
+          timer: 1500
         });
+        navigate("/dashboard/manage-items")
       }
     }
   };
@@ -51,7 +58,7 @@ const AddMenu = () => {
   return (
     <div className="w-full md:w-[870px] px-4 mx-auto">
       <h2 className="text-2xl font-semibold my-4">
-        Upload a new <span className=" text-0-yellowColor">Menu Item</span>
+        Update This <span className=" text-0-yellowColor">Menu Item</span>
       </h2>
 
       {/* form */}
@@ -63,6 +70,7 @@ const AddMenu = () => {
             </label>
             <input
               type="text"
+              defaultValue={item.name}
               {...register("name", { required: true })}
               placeholder="Battery Name"
               className="input input-bordered w-full"
@@ -79,7 +87,7 @@ const AddMenu = () => {
               <select
                 {...register("category", { required: true })}
                 className="select select-bordered"
-                defaultValue="default"
+                defaultValue={item.category}
               >
                 <option disabled value="default">
                   Select a category
@@ -100,6 +108,7 @@ const AddMenu = () => {
               </label>
               <input
                 type="number"
+                defaultValue={item.price}
                 {...register("price", { required: true })}
                 placeholder="Price"
                 className="input input-bordered w-full"
@@ -113,9 +122,10 @@ const AddMenu = () => {
               <span className="label-text">Battery Details</span>
             </label>
             <textarea
+             defaultValue={item.description}
               {...register("description", { required: true })}
               className="textarea textarea-bordered h-24"
-              placeholder="Tell the worlds about the battery"
+              placeholder="Tell the worlds about your battery"
             ></textarea>
           </div>
 
@@ -129,7 +139,7 @@ const AddMenu = () => {
           </div>
 
           <button className="btn bg-0-yellowColor text-white px-6">
-            Add Item <RiBatterySaverFill />
+            Update Item <PiBatteryWarningVerticalFill />
           </button>
         </form>
       </div>
@@ -137,4 +147,4 @@ const AddMenu = () => {
   );
 };
 
-export default AddMenu;
+export default UpdateMenu;
