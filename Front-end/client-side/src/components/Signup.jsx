@@ -67,9 +67,9 @@ const Signup = () => {
           .then((response) => {
             // console.log(response);
             alert("Signin successful!");
-            navigate(from, { replace: true });
+            navigate("/");
           });
-      })
+      }) 
       .catch((error) => console.log(error));
   };
 

@@ -61,7 +61,7 @@ const Model = () => {
             // console.log(response);
             alert("Signin successful!");
             document.getElementById("my_modal_5").close();
-            navigate(from, { replace: true });
+            navigate("/");
           });
       })
       .catch((error) => console.log(error));

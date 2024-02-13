@@ -51,7 +51,6 @@ const Login = () => {
   };
 
   // login with google
-  // login with google
   const handleLogin = () => {
     signUpWithGmail()
       .then((result) => {
