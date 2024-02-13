@@ -8,6 +8,7 @@ const menuController = require('../controllers/menuControllers')
 
 router.get('/', menuController.getAllMenuItems )
 
+
 // post a menu item
 router.post('/', menuController.postMenuItem);
 

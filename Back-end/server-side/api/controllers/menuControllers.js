@@ -55,10 +55,10 @@ const singleMenuItem = async (req, res) => {
 // update single menu item
 const updateMenuItem = async (req, res) => {
     const menuId = req.params.id;
-    const { name, recipe, image, category, price} = req.body;
+    const { name, description, image, category, price} = req.body;
     try {
         const updatedMenu = await Menu.findByIdAndUpdate(menuId, 
-            { name, recipe, image, category, price}, 
+            { name, description, image, category, price}, 
             {new: true, runValidator: true}
             );
 
@@ -74,11 +74,10 @@ const updateMenuItem = async (req, res) => {
 };
 
 
-
 module.exports = {
     getAllMenuItems,
     postMenuItem, 
-    deleteMenuItem,
+    deleteMenuItem, 
     singleMenuItem,
-    updateMenuItem
+    updateMenuItem,
 }
