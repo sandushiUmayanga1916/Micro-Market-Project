@@ -1,10 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/home/Home";
-import Menu from "../pages/shop/Menu";
+
 import Signup from "../components/Signup";
 import UpdateProfile from "../pages/dashboard/UpdateProfile";
-import CartPage from "../pages/shop/CartPage";
 import PrivateRouter from './../privateRouter/PrivateRouter';
 import DashboardLayout from "../layout/DashboardLayout";
 import Dashboard from "../pages/dashboard/admin/Dashboard";
@@ -13,6 +12,9 @@ import Login from "../components/Login";
 import AddMenu from "../pages/dashboard/admin/AddMenu";
 import ManageItems from "../pages/dashboard/admin/ManageItems";
 import UpdateMenu from "../pages/dashboard/admin/UpdateMenu";
+import Payment from "../pages/menuPage/Payment";
+import Menu from "../pages/menuPage/Menu";
+import CartPage from "../pages/menuPage/CartPage";
 
 
 
@@ -43,6 +45,10 @@ const router = createBrowserRouter([
           <UpdateProfile/>
         ),
       },
+      {
+        path: "process-checkout",
+        element: <Payment/>
+      },
     ],
   },
   {
@@ -53,6 +59,8 @@ const router = createBrowserRouter([
     path: "signup",
     element: <Signup />,
   },
+
+  // admin routes
   {
     path: "dashboard",
     element: <PrivateRouter><DashboardLayout/></PrivateRouter>,

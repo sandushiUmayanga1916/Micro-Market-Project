@@ -3,14 +3,13 @@ import useCart from "../../hooks/useCart";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthProvider";
-import LoadingSpinner from './../../components/LoadingSpinner';
+import LoadingSpinner from "./../../components/LoadingSpinner";
+import { Link } from "react-router-dom";
 
 const CartPage = () => {
   const [cart, refetch] = useCart();
   const { user } = useContext(AuthContext);
   const [cartItems, setCartItems] = useState([]);
-
-  
 
   // Fetch cart items when user changes
   useEffect(() => {
@@ -18,7 +17,11 @@ const CartPage = () => {
   }, [cart]);
 
   if (!user) {
-    return <div><LoadingSpinner/></div>; 
+    return (
+      <div>
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   const calculatePrice = (item) => {
@@ -30,9 +33,9 @@ const CartPage = () => {
     fetch(`http://localhost:5000/carts/${item._id}`, {
       method: "PUT",
       headers: {
-        "Content-type": "application/json; charset=UTF-8"
+        "Content-type": "application/json; charset=UTF-8",
       },
-      body: JSON.stringify({ quantity: item.quantity + 1 })
+      body: JSON.stringify({ quantity: item.quantity + 1 }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -54,32 +57,31 @@ const CartPage = () => {
   // Item quantity decrease
   const handleDecrease = (item) => {
     // console.log(item._id);
-    if(item.quantity > 1) {
+    if (item.quantity > 1) {
       fetch(`http://localhost:5000/carts/${item._id}`, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json; charset=UTF-8"
-      },
-      body: JSON.stringify({ quantity: item.quantity - 1 })
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const updatedCart = cartItems.map((cartItem) => {
-          if (cartItem.id === item.id) {
-            return {
-              ...cartItem,
-              quantity: cartItem.quantity - 1,
-            };
-          }
-          return cartItem;
-        });
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        body: JSON.stringify({ quantity: item.quantity - 1 }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const updatedCart = cartItems.map((cartItem) => {
+            if (cartItem.id === item.id) {
+              return {
+                ...cartItem,
+                quantity: cartItem.quantity - 1,
+              };
+            }
+            return cartItem;
+          });
 
-        refetch();
-        setCartItems(updatedCart);
-      });
-    }
-    else{
-      alert("Item can-t be zero")
+          refetch();
+          setCartItems(updatedCart);
+        });
+    } else {
+      alert("Item can-t be zero");
     }
   };
 
@@ -218,10 +220,18 @@ const CartPage = () => {
           <div className="md:w-1/2 space-y-3">
             <h3 className=" font-medium">Shoping Details</h3>
             <p>Total Items: {cart.length}</p>
-            <p>Total Price: {orderTotal.toLocaleString('en-US', { style: 'currency', currency: 'LKR' })}</p>
-            <button className="btn bg-0-yellowColor text-white">
-              Check out
-            </button>
+            <p>
+              Total Price:{" "}
+              {orderTotal.toLocaleString("en-US", {
+                style: "currency",
+                currency: "LKR",
+              })}
+            </p>
+            <Link to="/process-checkout">
+              <button className="btn bg-0-yellowColor text-white">
+                Check out
+              </button>
+            </Link>
           </div>
         </div>
       </div>
