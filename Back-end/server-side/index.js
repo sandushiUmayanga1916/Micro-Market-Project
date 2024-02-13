@@ -4,6 +4,7 @@ const cors = require("cors");
 const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const jwt = require('jsonwebtoken');
+const stripe = require("stripe")(process.env.STRIPE_SECRETE_KET);
 
 require('dotenv').config()
 
@@ -44,6 +45,26 @@ const userRoutes = require('./api/routes/userRoutes');
 app.use('/menu', menuRoutes);
 app.use('/carts', cartRoutes);
 app.use('/users', userRoutes);
+
+// stripe payment routes
+app.post("/create-payment-intent", async (req, res) => {
+  const { price } = req.body;
+  const amount = price *100;
+
+  // Create a PaymentIntent with the order amount and currency
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: amount,
+    currency: "lkr",
+
+    payment_method_types: ["card"],
+  });
+
+  res.send({
+    clientSecret: paymentIntent.client_secret,
+  });
+});
+
+
 
 app.get("/", (req, res) => {
   res.send("Hello micro-market Client Server!");
