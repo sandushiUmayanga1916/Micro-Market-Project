@@ -5,6 +5,8 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthProvider";
 import LoadingSpinner from "./../../components/LoadingSpinner";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
 
 const CartPage = () => {
   const [cart, refetch] = useCart();
@@ -93,7 +95,7 @@ const CartPage = () => {
   const orderTotal = cartSubTotal;
 
   // delete button
-  const handleDelete = (item) => {
+  const handleDelete =   (item) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -104,24 +106,18 @@ const CartPage = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/carts/${item._id}`, {
-          method: "DELETE",
+        axios.delete(`http://localhost:5000/carts/${item._id}`).then(response => {
+          if (response) {
+            refetch();
+             Swal.fire("Deleted!", "Your file has been deleted.", "success");
+           }
         })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.deletedCount > 0) {
-              refetch();
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success",
-              });
-            }
-          });
+        .catch(error => {
+          console.error(error);
+        });
       }
     });
   };
-
   return (
     <div className=" selection-container">
       {/* banner */}

@@ -5,9 +5,12 @@ import { FaThumbsUp } from "react-icons/fa6";
 import { AuthContext } from "../context/AuthProvider";
 import Swal from 'sweetalert2'
 import { Navigate } from 'react-router-dom';
+import axios from "axios";
+import useCart from "../hooks/useCart";
 
 const Cards = ({ item }) => {
   const { name, image, price, description, _id } = item;
+  const [cart, refetch] = useCart();
   const [isThumbsUp, setIsThumbsUp] = useState(false);
   const { user } = useContext(AuthContext);
   // console.log(user)
@@ -16,55 +19,52 @@ const Cards = ({ item }) => {
   const location = useLocation();
 
   // add to cart butto
-  const handleAddtoCart = (item) => {
-    // console.log("button is clicked", item)
-    if (user && user?.email) {
-      const cartItem = {
-        menuItemId: _id,
-        name,
-        quantity: 1,
-        image,
-        price,
-        email: user.email,
-      };
-      // console.log(cartItems)
-      fetch("http://localhost:5000/carts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cartItem),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          // console.log(data);
-          if(data.insertedId){
-            Swal.fire({
-              position: "middle",
-              icon: "success",
-              title: "Your work has been saved",
-              showConfirmButton: false,
-              timer: 1500
-            });
+  const handleAddToCart = item => {
+    // console.log(item);
+    if(user && user.email){
+        const cartItem = {menuItemId: _id, name, quantity : 1, image, price, email: user.email}
+
+        axios.post('http://localhost:5000/carts', cartItem)
+        .then((response) => {
+          console.log(response);
+          if(response){
+            refetch(); 
+              Swal.fire({
+                  position: 'center',
+                  icon: 'success',
+                  title: 'Battery added on the cart.',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
           }
+        })
+        .catch( (error) => {
+          console.log(error.response.data.message);
+          const errorMessage = error.response.data.message;
+          Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: `${errorMessage}`,
+            showConfirmButton: false,
+            timer: 1500
+          })
         });
     }
     else{
-      Swal.fire({
-        title: "Please Login!",
-        text: "Without an account can't able to add products!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Signup Now"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          navigate('/signup', {state:{from:location}})
-        }
-      });
+        Swal.fire({
+            title: 'Please login to order the battery',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Login now!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate('/login', {state: {from: location}})
+            }
+          })
     }
-  };
+}
 
   const handleOkClick = () => {
     setIsThumbsUp(!isThumbsUp);
@@ -105,7 +105,7 @@ const Cards = ({ item }) => {
           </h5>
           <button
             className="btn bg-0-yellowColor text-white"
-            onClick={() => handleAddtoCart(item)}
+            onClick={() => handleAddToCart(item)}
           >
             Add to Cart
           </button>
