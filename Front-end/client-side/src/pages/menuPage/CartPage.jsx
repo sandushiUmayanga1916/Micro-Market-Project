@@ -7,7 +7,6 @@ import LoadingSpinner from "./../../components/LoadingSpinner";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-
 const CartPage = () => {
   const [cart, refetch] = useCart();
   const { user } = useContext(AuthContext);
@@ -95,7 +94,7 @@ const CartPage = () => {
   const orderTotal = cartSubTotal;
 
   // delete button
-  const handleDelete =   (item) => {
+  const handleDelete = (item) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -106,131 +105,152 @@ const CartPage = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/carts/${item._id}`).then(response => {
-          if (response) {
-            refetch();
-             Swal.fire("Deleted!", "Your file has been deleted.", "success");
-           }
-        })
-        .catch(error => {
-          console.error(error);
-        });
+        axios
+          .delete(`http://localhost:5000/carts/${item._id}`)
+          .then((response) => {
+            if (response) {
+              refetch();
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            }
+          })
+          .catch((error) => {
+            console.error(error);
+          });
       }
     });
   };
   return (
-    <div className=" selection-container">
+    <div className="max-w-screen-2xl container mx-auto xl:px-24 px-4">
       {/* banner */}
-      <div className="py-36 flex flex-col justify-center items-center gap-8">
-        <div className="space-y-7 px-4">
-          <h2 className=" md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
-            Items added to the
-            <span className=" text-0-yellowColor"> CART</span>
-          </h2>
-        </div>
-      </div>
-
-      {/* table for cart items */}
-      <div className="overflow-x-auto">
-        <table className="table">
-          {/* head */}
-          <thead className=" bg-0-yellowColor text-white">
-            <tr>
-              <th>#</th>
-              <th>Battery</th>
-              <th>Item Name</th>
-              <th>Quantity</th>
-              <th>Price</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* row 1 */}
-            {cart.map((item, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>
-                  <div className="flex items-center gap-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img src={item.image} />
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td className=" font-medium">{item.name}</td>
-                <td>
-                  <button
-                    className="btn btn-xs rounded-full"
-                    onClick={() => handleDecrease(item)}
-                  >
-                    -
-                  </button>
-                  <input
-                    type="number"
-                    value={item.quantity}
-                    onChange={() => console.log(item.quantity)}
-                    className=" w-10 mx-2 text-center overflow-hidden
-                   appearance-none"
-                  />
-                  <button
-                    className="btn btn-xs rounded-full"
-                    onClick={() => handleIncrease(item)}
-                  >
-                    +
-                  </button>
-                </td>
-                <td>
-                  LKR{" "}
-                  {parseFloat(calculatePrice(item))
-                    .toLocaleString("en-US", {
-                      style: "currency",
-                      currency: "LKR",
-                    })
-                    .replace(/^LKR\s/, "")}
-                </td>
-
-                <th>
-                  <button
-                    className="btn btn-ghost text-red-600 btn-lg"
-                    onClick={() => handleDelete(item)}
-                  >
-                    <RiDeleteBin6Fill />
-                  </button>
-                </th>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* customer detail */}
-      <div className=" my-12 flex flex-col md:flex-row justify-between items-start">
-        <div className="md:w-1/2 space-y-3">
-          <h3 className=" font-medium">Customer Details</h3>
-          <p>Name: {user.displayName}</p>
-          <p>Email: {user.email}</p>
-          <p>User ID: {user.uid}</p>
-        </div>
-        <div className="md:w-1/2 space-y-3">
-          <div className="md:w-1/2 space-y-3">
-            <h3 className=" font-medium">Shoping Details</h3>
-            <p>Total Items: {cart.length}</p>
-            <p>
-              Total Price:{" "}
-              {orderTotal.toLocaleString("en-US", {
-                style: "currency",
-                currency: "LKR",
-              })}
-            </p>
-            <Link to="/process-checkout">
-              <button className="btn bg-0-yellowColor text-white">
-                Check out
-              </button>
-            </Link>
+      <div className=" bg-gradient-to-r from-0% from-[#FAFAFA] to-[#FCFCFC] to-100%">
+        <div className="py-28 flex flex-col items-center justify-center">
+          {/* content */}
+          <div className=" text-center px-4 space-y-7">
+            <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
+              Items Added to The
+              <span className=" text-0-yellowColor"> Cart</span>
+            </h2>
           </div>
         </div>
       </div>
+
+      {/* cart table */}
+
+      {cart.length > 0 ? (
+        <div>
+          <div className="">
+            <div className="overflow-x-auto">
+              <table className="table">
+                {/* head */}
+                <thead className=" bg-0-yellowColor text-white rounded-lg">
+                  <tr>
+                    <th>#</th>
+                    <th>Battery</th>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cart.map((item, index) => (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      <td>
+                        <div className="avatar">
+                          <div className="mask mask-squircle w-12 h-12">
+                            <img
+                              src={item.image}
+                              alt="Avatar Tailwind CSS Component"
+                            />
+                          </div>
+                        </div>
+                      </td>
+                      <td className="font-medium">{item.name}</td>
+                      <td>
+                        <button
+                          className="btn btn-sm rounded-full"
+                          onClick={() => handleDecrease(item)}
+                        >
+                          -
+                        </button>
+                        <input
+                          type="number"
+                          value={item.quantity}
+                          onChange={() => console.log(item.quantity)}
+                          className="w-10 mx-2 text-center overflow-hidden appearance-none"
+                        />
+                        <button
+                          className="btn btn-sm rounded-full"
+                          onClick={() => handleIncrease(item)}
+                        >
+                          +
+                        </button>
+                      </td>
+                      <td>
+                        LKR{" "}
+                        {parseFloat(calculatePrice(item))
+                          .toLocaleString("en-US", {
+                            style: "currency",
+                            currency: "LKR",
+                          })
+                          .replace(/^LKR\s/, "")}
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-md border-none text-red-600 bg-transparent"
+                          onClick={() => handleDelete(item)}
+                        >
+                          <RiDeleteBin6Fill />
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+                {/* foot */}
+              </table>
+            </div>
+          </div>
+          <hr />
+          <div className="flex flex-col md:flex-row justify-between items-start my-12 gap-8">
+            <div className="md:w-1/2 space-y-3">
+              <h3 className="text-lg font-semibold">Customer Details</h3>
+              <p>Name: {user?.displayName || "None"}</p>
+              <p>Email: {user?.email}</p>
+              <p>
+                User ID: <span className="text-sm">{user?.uid}</span>
+              </p>
+            </div>
+            <div className="md:w-1/2 space-y-3">
+              <h3 className="text-lg font-semibold">Shopping Details</h3>
+              <p>Total Items: {cart.length}</p>
+              <p>
+                Total Price:{" "}
+                <span id="total-price">
+                  {orderTotal.toLocaleString("en-LK", {
+                    style: "currency",
+                    currency: "LKR",
+                  })}
+                </span>
+              </p>
+              <Link to="/process-checkout">
+                <button className="btn btn-md bg-0-yellowColor text-white px-8 py-1 mt-5">
+                  Procceed to Checkout
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="text-center mt-20">
+          <p>Cart is empty. Please add products.</p>
+          <Link to="/menu">
+            <button className="btn bg-0-yellowColor text-white mt-3">
+              Back to Menu
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

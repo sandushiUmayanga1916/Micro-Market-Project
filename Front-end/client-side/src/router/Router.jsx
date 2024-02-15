@@ -15,6 +15,8 @@ import UpdateMenu from "../pages/dashboard/admin/UpdateMenu";
 import Payment from "../pages/menuPage/Payment";
 import Menu from "../pages/menuPage/Menu";
 import CartPage from "../pages/menuPage/CartPage";
+import Order from "../pages/dashboard/Order";
+import ManageOrderings from "../pages/dashboard/admin/ManageOrderings";
 
 
 
@@ -44,6 +46,10 @@ const router = createBrowserRouter([
         element: (
           <UpdateProfile/>
         ),
+      },
+      {
+        path: "/order",
+        element: <Order/>
       },
       {
         path: "process-checkout",
@@ -86,6 +92,10 @@ const router = createBrowserRouter([
         element: <UpdateMenu/>,
         loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
       },
+      {
+        path: 'manage-ordering',
+        element: <ManageOrderings/>
+      }
     ]
   },
 ]);

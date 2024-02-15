@@ -51,7 +51,7 @@ const Profile = () => {
               <a href="/update-profile">Profile</a>
             </li>
             <li>
-              <a>Orders</a>
+              <a href="/order">Orders</a>
             </li>
             <li>
               <Link to="/dashboard">Dashboard</Link>
