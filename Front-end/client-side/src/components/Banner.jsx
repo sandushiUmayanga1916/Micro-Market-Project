@@ -10,7 +10,7 @@ const Banner = () => {
                 <span className=' text-0-yellowColor'> Battery</span> House</h2>
                 <p className=' text-xl text-secondaryColor'>Revitalize your senses at the battery haven, where a symphony of charged beverages awaits to infuse your day 
                 with sustained vigor and lasting vitality.</p>
-                <button className=' bg-0-yellowColor text-white uppercase px-8 py-3 rounded-full'>order now</button>
+                <button className=' bg-0-yellowColor text-white uppercase px-8 py-3 rounded-full'><a href="/menu">order now</a></button>
             </div>
             {/* Image */}
             <div className='md:w-1/2'>

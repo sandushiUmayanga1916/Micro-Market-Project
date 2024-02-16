@@ -33,12 +33,11 @@ const Menu = () => {
       category === "all"
         ? menu
         : menu.filter((item) => item.category.includes(category));
-  
+
     setFilteredItems(filtered);
     setSelectedCategory(category);
     setCurrentPage(1);
   };
-  
 
   // Show all data
   const showAll = () => {
@@ -113,37 +112,49 @@ const Menu = () => {
           <div className="flex flex-row justify-start md:items-center md:gap-8 gap-4  flex-wrap">
             <button
               onClick={showAll}
-              className={selectedCategory === "all" ? "active" : ""}
+              className={`focus:text-0-yellowColor focus:font-bold ${
+                selectedCategory === "all" ? "active" : ""
+              }`}
             >
               All
             </button>
             <button
               onClick={() => filterItems("popular")}
-              className={selectedCategory === "popular" ? "active" : ""}
+              className={`focus:text-0-yellowColor focus:font-bold ${
+                selectedCategory === "popular" ? "active" : ""
+              }`}
             >
               Popular
             </button>
             <button
               onClick={() => filterItems("car")}
-              className={selectedCategory === "car" ? "active" : ""}
+              className={`focus:text-0-yellowColor focus:font-bold ${
+                selectedCategory === "car" ? "active" : ""
+              }`}
             >
               Car
             </button>
             <button
               onClick={() => filterItems("bike")}
-              className={selectedCategory === "bike" ? "active" : ""}
+              className={`focus:text-0-yellowColor focus:font-bold ${
+                selectedCategory === "bike" ? "active" : ""
+              }`}
             >
               Bike
             </button>
             <button
               onClick={() => filterItems("van")}
-              className={selectedCategory === "van" ? "active" : ""}
+              className={`focus:text-0-yellowColor focus:font-bold ${
+                selectedCategory === "van" ? "active" : ""
+              }`}
             >
               Van
             </button>
             <button
               onClick={() => filterItems("other")}
-              className={selectedCategory === "other" ? "active" : ""}
+              className={`focus:text-0-yellowColor focus:font-bold ${
+                selectedCategory === "other" ? "active" : ""
+              }`}
             >
               Other
             </button>
@@ -179,19 +190,22 @@ const Menu = () => {
 
       {/* pagination */}
       <div className="flex justify-center my-8">
-        {Array.from({ length: Math.ceil(filteredItems.length / itemsPerPage) }).map((_, index) => (
+        {Array.from({
+          length: Math.ceil(filteredItems.length / itemsPerPage),
+        }).map((_, index) => (
           <button
             key={index + 1}
             onClick={() => paginate(index + 1)}
             className={`mx-1 px-3 py-1 rounded-full ${
-              currentPage === index + 1 ? " bg-0-yellowColor text-white" : "bg-gray-200"
+              currentPage === index + 1
+                ? " bg-0-yellowColor text-white"
+                : "bg-gray-200"
             }`}
           >
             {index + 1}
           </button>
         ))}
-      </div>       
-
+      </div>
     </div>
   );
 };

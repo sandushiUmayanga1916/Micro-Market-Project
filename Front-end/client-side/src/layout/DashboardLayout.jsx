@@ -29,12 +29,12 @@ const sharedLinks = (
       </Link>
     </li>
     <li>
-      <Link to="/menu">
+      <Link to="/order">
         <FaLocationArrow /> Orders Tracking
       </Link>
     </li>
     <li>
-      <Link to="/menu">
+      <Link to="/">
         <FaQuestionCircle /> Customer Support
       </Link>
     </li>
@@ -116,15 +116,6 @@ const DashboardLayout = () => {
               </ul>
             </div>
           </div>{" "}
-          : (
-          <div className="h-screen flex justify-center items-center">
-            <Link to="/">
-              <button className="btn bg-0-yellowColor text-white">
-                Back to Home
-              </button>
-            </Link>
-          </div>
-          )
         </div>
       ) : (
         <Login />

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Order = () => {
   const { user } = useContext(AuthContext);
@@ -9,26 +9,47 @@ const Order = () => {
 
   const token = localStorage.getItem("access-token");
 
-  const { refetch, data: orders = [] } = useQuery({
+  const {
+    isLoading,
+    isError,
+    refetch,
+    data: orders = [],
+  } = useQuery({
     queryKey: ["orders", user?.email],
     queryFn: async () => {
-      const res = await fetch(
-        `http://localhost:5000/payment?email=${user?.email}`,
-        {
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
+      try {
+        const res = await fetch(
+          `http://localhost:5000/payment?email=${user?.email}`,
+          {
+            headers: {
+              authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        if (!res.ok) {
+          throw new Error("Failed to fetch orders");
         }
-      );
-      return res.json();
+        return res.json();
+      } catch (error) {
+        throw new Error("Failed to fetch orders");
+      }
     },
   });
 
-  // console.log(orders);
+  // Log data for debugging
+  console.log("Orders data:", orders);
 
   const formatDate = (createdAt) => {
-    const createdDate = new Date(createdAt)
-    return createdDate.toLocaleDateString() 
+    const createdDate = new Date(createdAt);
+    return createdDate.toLocaleDateString();
+  };
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error fetching orders</div>;
   }
 
   return (
@@ -52,7 +73,7 @@ const Order = () => {
           <div className="overflow-x-auto">
             <table className="table">
               {/* head */}
-              <thead className=" bg-0-yellowColor text-white rounded-lg">
+              <thead className=" bg-0-yellowColor text-white rounded-lg text-center">
                 <tr>
                   <th>#</th>
                   <th>Order Date</th>
@@ -65,19 +86,25 @@ const Order = () => {
               <tbody>
                 {orders.map((item, index) => (
                   <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>{formatDate(item.createdAt)}</td>
-                    <td>{item.transitionId}</td>
-                    <td>
+                    <td className="text-center">{index + 1}</td>
+                    <td className="text-center">
+                      {formatDate(item.createdAt)}
+                    </td>
+                    <td className="text-center">{item.transitionId}</td>
+                    <td className="text-center">
                       LKR{" "}
                       {item.price.toLocaleString("en-US", {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
                       })}
                     </td>
-                    <td className="text-red-400 font-semibold">{item.status}</td>
-                    <td>
-                      <Link to="/contact" className="underline italic">Contact</Link>
+                    <td className="text-red-400 font-semibold text-center">
+                      {item.status}
+                    </td>
+                    <td className="text-center">
+                      <Link to="/contact" className="underline italic ">
+                        Contact
+                      </Link>
                     </td>
                   </tr>
                 ))}
